@@ -3,7 +3,7 @@
 // This app is used as a demo for creating a video application utilizing the video API
 // built into HTML5. It is inspired by Bruce Lawson's example hack for creating video captions.
 // I added the ability to associate custom callbacks with moments in time of the video.
-// 
+//
 // @NOTE: Mozilla released Popcorn and Butter for doing the same thing right after I got this working.
 // @UPDATE: Popcorn and Butter are dead. This is now useful again. I've updated it to be vanilla JS
 // with no dependencies. by Troy Bennett 7-2010 (updated 12-2021)
@@ -70,7 +70,7 @@ function func5() {
 }
 
 function clearWindow() {
-    document.querySelector("#web").src = "";
+    document.querySelector("#web").src = "./blank.html";
 }
 
 function func7() {
