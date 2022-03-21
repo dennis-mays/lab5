@@ -1,15 +1,12 @@
-/**
- * main.js
- * The init script for this HTML5 Video Application
- * This app is used as a demo for creating a video application utilizing the video API
- * built into HTML5. It is inspired by Bruce Lawson's example hack for creating video captions.
- * I added the ability to associate custom callbacks with moments in time of the video.
- *
- *
- * @NOTE: Mozilla released Popcorn and Butter for doing the same thing right after I got this working.
- * @UPDATE: Popcorn and Butter are dead. This is now useful again. I've updated it to be vanilla JS
- * with no dependencies. by Troy Bennett 7-2010 (updated 12-2021)
- */
+// main.js
+// The init script for this HTML5 Video Application
+// This app is used as a demo for creating a video application utilizing the video API
+// built into HTML5. It is inspired by Bruce Lawson's example hack for creating video captions.
+// I added the ability to associate custom callbacks with moments in time of the video.
+// 
+// @NOTE: Mozilla released Popcorn and Butter for doing the same thing right after I got this working.
+// @UPDATE: Popcorn and Butter are dead. This is now useful again. I've updated it to be vanilla JS
+// with no dependencies. by Troy Bennett 7-2010 (updated 12-2021)
 
 import { cueTimer } from "./modules/cuepoints.js";
 
@@ -20,34 +17,35 @@ document.addEventListener("DOMContentLoaded", (e) => {
         { seconds: 31, callback: func3 },
         { seconds: 42, callback: func4 },
         { seconds: 50, callback: func5 },
-        { seconds: 60, callback: func6 },
+        { seconds: 60, callback: clearWindow },
         { seconds: 80, callback: func7 },
         { seconds: 86, callback: func8 },
         { seconds: 99, callback: func9 },
-        { seconds: 107, callback: func6 },
+        { seconds: 107, callback: clearWindow },
         { seconds: 119, callback: func10 },
-        { seconds: 137, callback: func6 },
+        { seconds: 137, callback: clearWindow },
         { seconds: 170, callback: func11 },
     ];
 
-    //this activates the cuepoints module.
+    // This activates the cuepoints module.
     // Pass it the ID of the video to watch
     // and the array of cuepoint objects.
     cueTimer.setup("vid", myCues);
 
-    //shortcut variables
+    // Shortcut variables
     const vid = document.querySelector("#vid");
     const selectList = document.querySelector("#video_select");
 
-    // make the select list control what video format to play
+    // Make the select list control what video format to play
     selectList.addEventListener("change", (e) => {
         selectVideo(e, vid);
     });
 });
 
-//the custom callback functions to trigger when a cuepoint is hit.
-//You can code up whatever behavior you need in your own callbacks
-//feel free to rename the functions to be more descriptive of what they do.
+// The custom callback functions to trigger when a cuepoint is hit.
+// You can code up whatever behavior you need in your own callbacks
+// feel free to rename the functions to be more descriptive of what they do.
+
 function func1() {
     document.querySelector("#vid").style = "outline : 3px solid #6441a5";
 }
@@ -71,7 +69,7 @@ function func5() {
     document.querySelector("#web").src = "images/river_delta.jpg";
 }
 
-function func6() {
+function clearWindow() {
     document.querySelector("#web").src = "";
 }
 
