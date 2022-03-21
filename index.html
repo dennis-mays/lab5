@@ -4,112 +4,183 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css" />
         <script src="js/video_helpers.js" defer></script>
         <script type="module" src="js/main.js" defer></script>
         <title>Lab 5 - Audio and Video</title>
     </head>
     <body>
         <h1>Lab 5: HTML5 Video with JS synchronized cuepoints: demo</h1>
-    
+
         <main id="container">
-    
             <section class="col1">
-    
                 <video id="vid" width="352" controls>
                     <source src="media/saving-the-bay.mp4" type="video/mp4" />
                     <source src="media/saving-the-bay.webm" type="video/webm" />
                     <source src="media/saving-the-bay.ogv" type="video/ogg" />
-                    <track kind="captions" label="On" srclang="en" src="./captions/saving-the-bay-subtitles.vtt" default />
-    
+                    <track
+                        kind="captions"
+                        label="On"
+                        srclang="en"
+                        src="./captions/saving-the-bay-subtitles.vtt"
+                        default
+                    />
+
                     <!-- final fallback to text -->
                     <h2>Saving the Bay</h2>
                     <p>
-                        The estuary the world came to call San Francisco Bay is actually three bays
-                        and a vast inland river delta. San Francisco Bay proper is the most well
-                        known, with its ever spectacular dance of air, wind and water. To the north
-                        lies San Pablo Bay, nearly round in shape and exceedingly shallow. East
-                        through a second break in the coastal mountain ranges called Carquinez
-                        Straight, is a third bay, Suisun Bay. Beyond a network of rivers and
-                        channels. The highly altered river delta formed by the Sacramento and San
-                        Joaquin rivers, provides the bay with its freshwater inflow. In the long
-                        history of the planet. Today, San Francisco Bay is a relative newcomer.
+                        The estuary the world came to call San Francisco Bay is
+                        actually three bays and a vast inland river delta. San
+                        Francisco Bay proper is the most well known, with its
+                        ever spectacular dance of air, wind and water. To the
+                        north lies San Pablo Bay, nearly round in shape and
+                        exceedingly shallow. East through a second break in the
+                        coastal mountain ranges called Carquinez Straight, is a
+                        third bay, Suisun Bay. Beyond a network of rivers and
+                        channels. The highly altered river delta formed by the
+                        Sacramento and San Joaquin rivers, provides the bay with
+                        its freshwater inflow. In the long history of the
+                        planet. Today, San Francisco Bay is a relative newcomer.
                     </p>
                     <p>
-                        We know that there have been at least four bays, at least four times when
-                        this valley was filled with water, and there was a San Francisco Bay, and
-                        there may have been as many as seven. Twenty-seven miles West of the Golden
-                        Gate lie the Farallon Islands. Fourteen thousand years ago the Farallons
-                        were hills within a vast river plain extending west to the Continental Shelf
-                        a few miles beyond. This once was the West Coast of North America.
+                        We know that there have been at least four bays, at
+                        least four times when this valley was filled with water,
+                        and there was a San Francisco Bay, and there may have
+                        been as many as seven. Twenty-seven miles West of the
+                        Golden Gate lie the Farallon Islands. Fourteen thousand
+                        years ago the Farallons were hills within a vast river
+                        plain extending west to the Continental Shelf a few
+                        miles beyond. This once was the West Coast of North
+                        America.
                     </p>
                     <p>
-                        During the height of the last ice Age, we tend to think the world was frozen
-                        over. Wooly Mammoths running around in snowy areas and glaciers and all the
-                        peaks and actually the geological and paleontological information tells us
-                        that the environment, the climate here in San Francisco Bay region was not
-                        much different than it is today.
+                        During the height of the last ice Age, we tend to think
+                        the world was frozen over. Wooly Mammoths running around
+                        in snowy areas and glaciers and all the peaks and
+                        actually the geological and paleontological information
+                        tells us that the environment, the climate here in San
+                        Francisco Bay region was not much different than it is
+                        today.
                     </p>
                     <p>
-                        As the last Ice Age ended today's gulf of the Farallones was a vast plain
-                        over which a great river flowed. It was here that the first human
-                        inhabitants of the region likely lived. Drawn by the abundant water, fish
-                        and wildlife. Some eight or nine thousand years ago, as the glaciers of the
-                        Wisconsin Ice Age began to melt, the seas rose and they came across the
-                        previous shore line which is out there just on the other side of the
-                        Farallon Islands, came across the plain we now call the gulf of the
-                        Farallones, began to enter San Francisco Bay, through the Golden Gate. As
-                        sea level rose, the great river that flowed out through a low point in the
-                        coastal range flooded the river canyon, now called the Golden Gate began to
-                        take on its present form. As water continued to rise vast river valleys
-                        inland filled as well. Seven thousand years ago the dramatic shift in sea
-                        level slowed. Sediment flowing in from the surrounding hills in the great
-                        valley inland, settled around the edges of the new estuary. Plant and animal
-                        life begin to flourish.
+                        As the last Ice Age ended today's gulf of the Farallones
+                        was a vast plain over which a great river flowed. It was
+                        here that the first human inhabitants of the region
+                        likely lived. Drawn by the abundant water, fish and
+                        wildlife. Some eight or nine thousand years ago, as the
+                        glaciers of the Wisconsin Ice Age began to melt, the
+                        seas rose and they came across the previous shore line
+                        which is out there just on the other side of the
+                        Farallon Islands, came across the plain we now call the
+                        gulf of the Farallones, began to enter San Francisco
+                        Bay, through the Golden Gate. As sea level rose, the
+                        great river that flowed out through a low point in the
+                        coastal range flooded the river canyon, now called the
+                        Golden Gate began to take on its present form. As water
+                        continued to rise vast river valleys inland filled as
+                        well. Seven thousand years ago the dramatic shift in sea
+                        level slowed. Sediment flowing in from the surrounding
+                        hills in the great valley inland, settled around the
+                        edges of the new estuary. Plant and animal life begin to
+                        flourish.
                     </p>
                     <p>The san Francisco Bay we know today, was born.</p>
                 </video>
-    
+
                 <div id="controls">
                     <form id="video_form">
                         <fieldset>
-                            <input type="button" id="play_button" onclick="" value="Play" />
-                            <input type="button" id="pause_button" onclick="" value="Pause" />
-                            <input type="button" id="mute" onclick="" value="Mute" />
-                            <input type="button" id="unmute" onclick="" value="Unmute" />
-                            <input type="button" id="rewind" onclick="" value="Beginning" />
-                            <input type="button" id="end" onclick="" value="End" />
-                            <input type="button" id="seek" onclick="" value="Go to Statistics" />
+                            <input
+                                type="button"
+                                id="play_button"
+                                onclick="playVideo(vid)"
+                                value="Play"
+                            />
+                            <input
+                                type="button"
+                                id="pause_button"
+                                onclick="pauseVideo(vid)"
+                                value="Pause"
+                            />
+                            <input
+                                type="button"
+                                id="mute"
+                                onclick="muteVideo(vid)"
+                                value="Mute"
+                            />
+                            <input
+                                type="button"
+                                id="unmute"
+                                onclick="unmuteVideo(vid)"
+                                value="Unmute"
+                            />
+                            <input
+                                type="button"
+                                id="rewind"
+                                onclick="seekVideo(vid, 0)"
+                                value="Beginning"
+                            />
+                            <input
+                                type="button"
+                                id="end"
+                                onclick="endVideo(vid, vid.duration)"
+                                value="End"
+                            />
                         </fieldset>
                         <fieldset>
                             <select id="video_select">
                                 <option>Select a video to play...</option>
-                                <option value="assets/leverage-a-synergy.mp4">Leverage(mp4)</option>
-                                <option value="assets/leverage-a-synergy.ogv">Leverage(ogv)</option>
-                                <option value="assets/leverage-a-synergy.webm">Leverage(webm)</option>
+                                <option value="media/saving-the-bay.mp4">
+                                    Saving the Bay(mp4)
+                                </option>
+                                <option value="media/saving-the-bay.webm">
+                                    Saving the Bay(webm)
+                                </option>
+                                <option value="media/saving-the-bay.ogv">
+                                    Saving the Bay(ogv)
+                                </option>
                             </select>
                         </fieldset>
                         <fieldset>
-                            <label>Currently, rewind only works in Safari
-                                <input type=button id="rw" onclick="" value="&lt; &lt;rewind" />
-                            </lable>
-                            <input type=button id="ff" onclick="" value="fast forward >>" />
-                            <input type=button id="slo" onclick="" value="slo mo >" />
-                            <input type=button id="normal" onclick="" value="normal >" />
+                            <label
+                                >Currently, rewind only works in Safari
+                                <input
+                                    type="button"
+                                    id="rw"
+                                    onclick="playRate(vid, -1)"
+                                    value="<< rewind"
+                                />
+                            </label>
+                            <input
+                                type="button"
+                                id="ff"
+                                onclick="playRate(vid, 2)"
+                                value="fast forward >>"
+                            />
+                            <input
+                                type="button"
+                                id="slo"
+                                onclick="playRate(vid, .5)"
+                                value="slo mo >"
+                            />
+                            <input
+                                type="button"
+                                id="normal"
+                                onclick="playRate(vid, 1)"
+                                value="normal >"
+                            />
                         </fieldset>
                     </form>
                 </div>
-    
+
                 <div class="pop hide">
                     <p>Test This!</p>
                 </div>
             </section>
-    
+
             <section class="col2">
                 <iframe id="web" src=""></iframe>
             </section>
-    
         </main>
-    
     </body>
 </html>
